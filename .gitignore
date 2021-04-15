@@ -1,0 +1,7 @@
+# libraries
+/venv
+*.zip
+*.xml
+*.iml
+# other files
+/txt/INSTRUKCJA.txt
