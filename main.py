@@ -3,7 +3,7 @@ from encoding import encode
 from transmission import transmit
 
 # encodings used to encode and decode packets
-encoding = 'utf-16 be'
+encoding = 'utf-8'
 # probability of lack of error on a single bit in a packet
 probability = 0.9
 # path to the file, where experiment results are stored
@@ -24,7 +24,7 @@ def main():
             retransmissions += 1
             tmp = transmit(tmp, probability)
         received_data.append(decode(tmp))
-    print(received_data)
+
     print(f'Retransmissions: {retransmissions}')
     actual_number_of_errors(data, received_data, filepath)
 
