@@ -1,12 +1,12 @@
+from random import seed, random
+
 from bitstring import BitArray
-from typing import List
-from random import seed, random, gauss
 
 
-def transmit(packets: List[BitArray], probability: float) -> List[BitArray]:
+def transmit(packet: BitArray, probability: float) -> BitArray:
     seed()
-    for packet in packets:
-        for bit in range(packet.len):
-            if random() > probability:
-                packet.invert(bit)
-    return packets
+    for bit in range(packet.len):
+        tmp = random()
+        if tmp > probability:
+            packet.invert(bit)
+    return packet
