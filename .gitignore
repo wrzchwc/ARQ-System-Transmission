@@ -1,9 +1,9 @@
 # libraries
-/venv
+venv/
 *.zip
 *.xml
 *.iml
 # other files
-/txt
+txt/
 *.txt
-/.idea
+.idea/
