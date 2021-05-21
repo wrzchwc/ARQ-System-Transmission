@@ -3,8 +3,8 @@ from typing import List
 from bitstring import BitArray
 
 
-# encodes elements of the list into packets and generates parity bit for each packet
 def encode(data: list, encoding: str) -> List[BitArray]:
+    """encodes elements of the list into packets and generates parity bit for each packet"""
     ready_packets = []
     for d in data:
         tmp = BitArray(bytearray(d, encoding))

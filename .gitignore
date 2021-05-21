@@ -5,3 +5,5 @@
 *.iml
 # other files
 /txt
+*.txt
+/.idea

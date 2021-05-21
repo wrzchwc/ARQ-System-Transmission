@@ -4,9 +4,9 @@ from bitstring import BitArray
 
 
 def transmit(packet: BitArray, probability: float) -> BitArray:
+    tmp = packet
     seed()
-    for bit in range(packet.len):
-        tmp = random()
-        if tmp > probability:
-            packet.invert(bit)
-    return packet
+    for bit in range(tmp.len):
+        if random() > probability:
+            tmp.invert(bit)
+    return tmp
